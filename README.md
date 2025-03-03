@@ -42,13 +42,15 @@ To bring our concept to reality, we developed a functional prototype consisting 
 The Smart Cabinet was built using an ESP32-based IoT system integrated with multiple sensors and actuators:
 
 ESP32-CAM: Captured images of stored food for AI-based identification​
-.
+
 Load Cell (HX711): Measured the weight of food items to track consumption​
-.
+
 Electrochromic Glass Panel: Enabled touch-activated transparency for an interactive user experience.
+
 Relay Module: Controlled the activation of LED lighting for improved image recognition.
+
 Pulse Sensor & Temperature Sensor (Smartwatch Integration): Monitored real-time health parameters of users​
-.
+
 ## Software & Cloud Integration
 The software stack was designed to ensure seamless communication between hardware and the cloud:
 
