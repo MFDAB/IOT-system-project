@@ -54,26 +54,26 @@ Pulse Sensor & Temperature Sensor (Smartwatch Integration): Monitored real-time 
 ## Software & Cloud Integration
 The software stack was designed to ensure seamless communication between hardware and the cloud:
 
-Web Dashboard & Mobile App:
+### Web Dashboard & Mobile App:
 
-Developed using HTML, CSS, JavaScript, and Python (Flask).
-Displayed real-time inventory updates, food expiration alerts, and health analytics​
-.
-AI-Based Image Processing:
+#### Developed using HTML, CSS, JavaScript, and Python (Flask).
+#### Displayed real-time inventory updates, food expiration alerts, and health analytics​
 
-Used YOLOv9 model to recognize food items inside the cabinet​
-.
-Implemented custom-trained AI models for better accuracy.
-Cloud-Based Data Storage & API Integration:
+### AI-Based Image Processing:
 
-Flask Web Server handled communication between ESP32 devices and the cloud.
-Data logged into Firebase, allowing remote access and analysis​
+#### Used YOLOv9 model to recognize food items inside the cabinet​
 .
-Health Monitoring & Doctor Integration:
+#### Implemented custom-trained AI models for better accuracy.
+### Cloud-Based Data Storage & API Integration:
 
-Health data was automatically shared with doctors for improved diagnosis.
-Implemented a smartwatch prototype to track heart rate, temperature, and blood glucose levels​
+#### Flask Web Server handled communication between ESP32 devices and the cloud.
+#### Data logged into Firebase, allowing remote access and analysis​
 .
+### Health Monitoring & Doctor Integration:
+
+#### Health data was automatically shared with doctors for improved diagnosis.
+#### Implemented a smartwatch prototype to track heart rate, temperature, and blood glucose levels​.
+
 # Challenges & Solutions
 Throughout the project, we faced several technical and operational challenges:
 
