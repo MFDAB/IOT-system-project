@@ -1,5 +1,3 @@
-# IOT-system-project
-
 # IoT-Based Smart Cabinet for Preventive Healthcare
 
 # Introduction
