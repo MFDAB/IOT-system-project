@@ -1,105 +1,58 @@
-# IoT-Based Smart Cabinet for Preventive Healthcare
+## 🥗 Project Overview: IoT-Based Smart Cabinet
 
-# Introduction
-As part of our IoT System Project coursework, my teammates and I embarked on a journey to conceptualize, design, and develop an innovative IoT-based Smart Cabinet. The objective was to bridge the gap between everyday nutrition and preventive healthcare through IoT technology.
+The **Smart Cabinet** is an innovative IoT system designed to bridge the gap between daily nutrition and preventive healthcare. By automating food inventory management and monitoring dietary habits, the system provides real-time health insights and facilitates early diagnosis of nutritional deficiencies.
 
-Our project aimed to automate food inventory management, monitor dietary habits, and provide real-time health insights. We envisioned a smart cabinet that could track food consumption, recommend healthier choices, and integrate with healthcare providers to aid in early diagnosis of nutritional deficiencies​
-.
+> **The Vision:** To transform a standard kitchen cabinet into a data-driven health assistant that reduces food waste and integrates seamlessly with professional healthcare providers.
 
-# Problem Statement & Motivation
-Despite increasing awareness of the importance of proper nutrition, imbalanced diets and food waste remain significant issues. Many individuals struggle to keep track of their dietary habits, leading to malnutrition and preventable health issues.
+---
 
-Traditional diet tracking and inventory management methods are time-consuming, inaccurate, and lack integration with healthcare systems. Our project addressed these issues by leveraging IoT and AI technologies to create an automated, data-driven solution.
+## 🛠 System Architecture
 
-# Project Objectives
-The primary goal of our project was to enhance preventive healthcare through real-time dietary monitoring. Our specific objectives included:
+### 1. Hardware Integration (ESP32 Ecosystem)
 
-Automate Inventory Management:
+The prototype utilizes an **ESP32-based** core to manage a suite of sensors and actuators:
 
-Use AI-powered image recognition and weight sensors to identify and track food items in the cabinet.
-Provide users with a live feed and dashboard for real-time updates​
-.
-Promote Healthy Eating Habits:
+* **Computer Vision:** An **ESP32-CAM** captures images for AI-powered food identification.
+* **Weight Sensing:** A **Load Cell (HX711)** tracks food consumption by measuring weight changes.
+* **Interactive UI:** An **Electrochromic Glass Panel** provides a touch-activated transparent view of the contents.
+* **Health Monitoring:** Integrated sensors track heart rate, temperature, and blood glucose via a smartwatch prototype.
 
-Offer personalized recipe suggestions based on available food.
-Track and analyze eating patterns to encourage healthier choices.
-Facilitate Healthcare Integration:
+### 2. Software & AI Stack
 
-Share nutrient consumption reports with doctors for better diagnosis and personalized treatment.
-Allow users to maintain an accurate health record with insights into their dietary intake​
-.
-Enhance User Experience with Smart Features:
+* **Object Detection:** Implements the **YOLOv9** model to recognize and categorize food items.
+* **Backend:** A **Flask (Python)** web server handles communication between hardware and the cloud.
+* **Data Management:** **Firebase** is used for real-time data logging and remote access.
+* **Dashboard:** A custom web/mobile interface built with **HTML, CSS, and JavaScript** displays alerts and analytics.
 
-Enable remote access to the cabinet using a mobile app.
-Use electrochromic glass to provide a touch-activated transparent view of the cabinet’s contents​
-.
-# System Design & Implementation
-To bring our concept to reality, we developed a functional prototype consisting of hardware components, software architecture, and cloud-based data management.
+---
 
-## Hardware Components
-The Smart Cabinet was built using an ESP32-based IoT system integrated with multiple sensors and actuators:
+## 🚧 Challenges & Engineering Solutions
 
-ESP32-CAM: Captured images of stored food for AI-based identification​
+| Technical Challenge | Solution Implemented |
+| --- | --- |
+| **Image Quality:** Overexposure in ESP32-CAM | Optimized lighting with LED strips and black foam insulation. |
+| **High Voltage:** Electrochromic glass power needs | Utilized a relay-controlled supply to regulate **20V – 34V**. |
+| **Data Noise:** Pulse sensor instability | Implemented a **Kalman filter** to smooth readings and improve accuracy. |
+| **Connectivity:** Unstable socket communication | Standardized messaging protocols for reliable ESP32-to-server links. |
 
-Load Cell (HX711): Measured the weight of food items to track consumption​
+---
 
-Electrochromic Glass Panel: Enabled touch-activated transparency for an interactive user experience.
+## 📈 Key Outcomes & Future Roadmap
 
-Relay Module: Controlled the activation of LED lighting for improved image recognition.
+* **Healthcare Integration:** Nutrient consumption reports are shared directly with doctors for proactive intervention.
+* **Waste Reduction:** Live inventory feeds and expiration alerts minimize food spoilage.
+* **Scalability:** The system is designed for easy integration into broader smart home automation ecosystems.
 
-Pulse Sensor & Temperature Sensor (Smartwatch Integration): Monitored real-time health parameters of users​
+### **Next Steps for Development:**
 
-## Software & Cloud Integration
-The software stack was designed to ensure seamless communication between hardware and the cloud:
+* **Voice Control:** Integration with Google Assistant or Alexa.
+* **Enhanced Security:** Moving medical records to a **Blockchain-based** system for privacy.
+* **Advanced AI:** Predictive meal planning based on specific medical conditions.
 
-### Web Dashboard & Mobile App:
+---
 
-#### Developed using HTML, CSS, JavaScript, and Python (Flask).
-#### Displayed real-time inventory updates, food expiration alerts, and health analytics​
+## 👤 About the Lead Engineer
 
-### AI-Based Image Processing:
+**R Sanjeev** is an Engineering student from **Nanyang Polytechnic** specializing in **Electronic & Computer Engineering**. With a proven track record in mechatronics and competitive hacking, he focuses on leveraging AI and IoT to solve real-world sustainability and healthcare challenges.
 
-#### Used YOLOv9 model to recognize food items inside the cabinet​
-.
-#### Implemented custom-trained AI models for better accuracy.
-### Cloud-Based Data Storage & API Integration:
-
-#### Flask Web Server handled communication between ESP32 devices and the cloud.
-#### Data logged into Firebase, allowing remote access and analysis​
-.
-### Health Monitoring & Doctor Integration:
-
-#### Health data was automatically shared with doctors for improved diagnosis.
-#### Implemented a smartwatch prototype to track heart rate, temperature, and blood glucose levels​.
-
-# Challenges & Solutions
-Throughout the project, we faced several technical and operational challenges:
-
-Challenge	Solution Implemented
-ESP32-CAM image quality issues	Optimized lighting conditions using LED strips and black foam to reduce overexposure​
-.
-Electrochromic glass required high voltage	Used a relay-controlled power supply to regulate voltage (20V-34V)​
-.
-Data noise in pulse sensor readings	Implemented a Kalman filter to reduce noise and improve accuracy​
-.
-Inconsistent server communication	Standardized socket messaging protocols to ensure stable connections between ESP32 devices and the server​
-.
-# Outcomes & Impact
-The Smart Cabinet successfully demonstrated the potential of IoT and AI in preventive healthcare. Our key achievements include:
-
-Accurate real-time food tracking, reducing waste and ensuring better nutrition.
-Seamless integration with healthcare providers, enabling proactive medical interventions.
-User-friendly web dashboard for monitoring health data and inventory.
-Scalability potential for integration into large-scale smart home automation systems​
-.
-# Future Enhancements
-Although our prototype was functional, future developments could further improve its real-world applicability:
-
-Multi-User Support: Expand access control for households with multiple members.
-Voice-Activated Assistance: Integrate Google Assistant or Alexa for hands-free operation.
-Advanced AI Prediction: Use machine learning models to suggest meal plans based on health conditions.
-Blockchain-Based Health Records: Enhance data security and privacy when sharing medical information.
-8. Conclusion
-This IoT System Project was an immensely rewarding experience, allowing us to apply theoretical knowledge into a real-world solution. From ideation to prototyping, our team successfully designed, built, and tested an IoT-enabled Smart Cabinet that could redefine preventive healthcare and nutrition tracking.
-
-By collaborating as a team, overcoming challenges, and integrating feedback from industrial partners, we transformed an idea into a working prototype. This project showcased the power of IoT, AI, and cloud computing in revolutionizing healthcare and smart living solutions.
+**Would you like me to help you format the "System Design & Implementation" section into a more technical specification list for your repository's Wiki?**
