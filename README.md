@@ -68,19 +68,10 @@ The system is built on an **ESP32-based IoT core** integrated with several speci
 
 | Challenge | Solution Implemented |
 | --- | --- |
-| **ESP32-CAM Image Quality** | Optimized lighting with LED strips and black foam to minimize overexposure.
-
- |
-| **High Voltage Requirements** | Used a relay-controlled power supply to regulate the 20V–34V required for electrochromic glass.
-
- |
-| **Sensor Data Noise** | Applied a **Kalman filter** to pulse sensor readings to enhance accuracy.
-
- |
-| **Communication Stability** | Standardized socket messaging protocols for reliable ESP32-to-server connections.
-
- |
-
+| **ESP32-CAM Image Quality** | Optimized lighting with LED strips and black foam to minimize overexposure. |
+| **High Voltage Requirements** | Used a relay-controlled power supply to regulate the 20V–34V required for electrochromic glass. |
+| **Sensor Data Noise** | Applied a **Kalman filter** to pulse sensor readings to enhance accuracy. |
+| **Communication Stability** | Standardized socket messaging protocols for reliable ESP32-to-server connections. |
 ---
 
 ## 📈 Outcomes & Impact
